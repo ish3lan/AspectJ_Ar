@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+	<meta charset="utf-8"/>
+<style type="text/css">
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700);
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+pre, code {
+    font-family: "Menlo", "Courier New", monospace;
+}
+
+a[dir="rtl"], [dir="rtl"] a {
+    text-decoration: none;
+}
+
+body {
+    padding: 1rem;
+    background-color: #FFF;
+    color: #333;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #1A82D1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #65b5d1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    position: relative;
+    padding: 0;
+    margin: 1em 0 0.4em 0;
+}
+
+h1 tt, h1 code {
+    font-size: inherit;
+}
+
+h2 tt, h2 code {
+    font-size: inherit;
+}
+
+h3 tt, h3 code {
+    font-size: inherit;
+}
+
+h4 tt, h4 code {
+    font-size: inherit;
+}
+
+h5 tt, h5 code {
+    font-size: inherit;
+}
+
+h6 tt, h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.83rem;
+}
+
+h6 {
+    font-size: 0.67rem;
+}
+
+p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 1rem 0;
+}
+
+hr {
+    border: 0 none;
+    border-top: 1px solid #ccc;
+    height: 1px;
+    display: block;
+    color: #c6d4db;
+    padding: 0;
+    width: 62%;
+    margin: 1rem auto 1.5rem auto;
+    background: transparent;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-of-type + h2 {
+    color: #868586;
+    margin-top: -0.5rem;
+    padding-top: 0;
+}
+
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li {
+    margin: 0;
+}
+
+ul, ol {
+    padding-left: 4rem;
+    margin-top: 1rem;
+}
+
+ul ol, ol ul, ul ul, ol ol {
+    padding-left: 3rem;
+    margin-bottom: 0;
+}
+
+ul[dir="rtl"], ol[dir="rtl"] {
+    padding-left: 0;
+    padding-right: 4rem;
+}
+
+ol[lang="ar"]
+{
+    list-style-type: arabic-indic;
+}
+
+ul ol[dir="rtl"], ol ul[dir="rtl"], ul ul[dir="rtl"], ol ol[dir="rtl"] {
+    padding-right: 3rem;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ul :first-child, ol :first-child {
+    margin-top: 0;
+}
+
+dl {
+    padding: 0;
+}
+
+dl dt {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 1rem 0 0.5rem;
+}
+
+dl dt:first-child {
+    padding: 0;
+}
+
+dl dt > :first-child {
+    margin-top: 0;
+}
+
+dl dt > :last-child {
+    margin-bottom: 0;
+}
+
+dl dd {
+    margin: 0 0 1rem;
+    padding: 0 1rem;
+}
+
+dl dd > :first-child {
+    margin-top: 0;
+}
+
+dl dd > :last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    padding: 1em 0.8rem;
+    margin-left: 3rem;
+    color: #777777;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 1.2em;
+}
+
+blockquote:before {
+    color: #bcbcbc;
+    content: "\201C";
+    font-size: 4em;
+    position: absolute;
+    line-height: 1;
+}
+
+blockquote:before {
+    top: 1rem;
+    left: -2rem;
+}
+
+blockquote[dir="rtl"]:before {
+    top: 1rem;
+    right: -2rem;
+    left: auto;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+blockquote > :first-child {
+    margin-top: 0;
+}
+
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+blockquote[dir="rtl"] {;
+    border-left: 0 none;
+    margin-left: 0;
+    margin-right: 3em;
+    padding-right: 1rem;
+    padding-left: 0.8rem;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+    font-size: inherit;
+}
+
+table caption {
+    color: #000;
+    font-size: 85%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+table tr {
+    border-top: 1px solid #ddd
+}
+
+table td, table th {
+    border: 0;
+    border-left: 1px solid #ddd;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 0.5rem 1rem;
+}
+table td:first-child, table th:first-child {
+    border-left-width: 0;
+}
+
+table thead {
+    background: #e7e6e5;
+    color: #111;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+table tr th :first-child, table tr td :first-child {
+    margin-top: 0;
+}
+
+table tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+figcaption { display: none; }
+
+
+code, tt {
+    margin: 0 2px;
+    padding: 0 5px;
+    white-space: nowrap;
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+
+pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent;
+}
+
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    font-size: 1em;
+    overflow: auto;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+}
+
+pre code, pre tt {
+    background-color: transparent;
+    border: none;
+}
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+
+@media screen and (min-width:920px) {
+    body {
+        width: 860px;
+        margin: 0 auto;
+    }
+}
+
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+
+
+    table, pre, blockquote {
+        page-break-inside: avoid;
+    }
+
+}
+
+
+body {
+    font-family: 'Noto Naskh Arabic', 'Noto Serif', serif;
+    font-size: 1em;
+    line-height: 2;
+}
+
+html[dir="rtl"] body {
+    font-size: 1.1em;
+}
+
+[dir="rtl"], body[dir="rtl"] {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Kufi Arabic", "Noto Sans", sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.369em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.777em;
+    margin: 0.9em 0 0.5em 0;
+}
+
+h3 {
+    font-size: 1.333em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+body > h1:first-of-type {
+    margin-bottom: 1.1em;
+    font-weight: normal;
+}
+
+body > h1:first-of-type + h2 {
+    margin-top: -1.3em;
+    margin-bottom: 1.1em;
+    font-weight: normal;
+}
+
+p, blockquote, ul, ol, dl, table, pre {
+    margin-bottom: 1.8em;
+    margin-top: 0;
+}
+
+@media (max-width: 40.063em) {
+    body {
+        font-size: 0.8em;
+    }
+
+    html[dir="rtl"] body {
+        font-size: 0.9em;
+    }
+}</style>
+<style type="text/css">
+body > h1:first-of-type, body > h1:first-of-type + h2 {text-align:center;}p{text-align:justify;}table { margin-left: auto; margin-right: auto; margin-top: 2rem; border: 0 none; }
+table tr, table td { border: 0 none; padding: 0 2rem; }
+td { width: 50%; text-align: justify !important; text-align-last:justify !important; height: 1rem; line-height: 1; }
+tr > td:only-child { text-align: center !important; width: 100%; }td:after, td:after{
+   content: "";
+   display: inline-block;
+   width: 100%;
+}</style>
+</head>
+<body>
+<figure>
+<img src="https://thearthand.files.wordpress.com/2011/04/coloured-glass-mosaic-019x-e1413458818342.jpg" alt="شالين" />
+<figcaption>شالين</figcaption>
+</figure>
+
+<h1 dir="rtl" id="aspcetj">AspcetJ</h1>
+
+<p dir="rtl">أهلاً بك،<br/>
+هذه التدوينة تتحدث عن <a href="https://ar.wikipedia.org/wiki/%D9%86%D9%85%D8%B7_%D8%A8%D8%B1%D9%85%D8%AC%D8%A9">نموذج أو نمط برمجي</a> (<a href="https://en.wikipedia.org/wiki/Programming_paradigm">Prgoramming Paradigm</a>) يسمى بـ <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">Aspect Oriented Programming</a> أو <a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D9%85%D8%AC%D8%A9_%D8%AC%D8%A7%D9%86%D8%A8%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D9%86%D8%AD%D9%89">البرمجة جانبية المنحى</a> وكيفية تطبيقه في المشاريع المكتوبة بلغة جافا عن طريق استعمال إضافة <a href="https://en.wikipedia.org/wiki/AspectJ">AspectJ</a> .</p>
+
+<hr />
+
+<h3 dir="rtl" id="البرمجةجانبيةالمنحى:">البرمجة جانبية المنحى:</h3>
+
+<p dir="rtl">هذا النمط البرمجي يهتم بفصل بعض الأجزاء من شفرة المشروع <em>ولنتفق على تسميتها <strong>اهتمامات</strong></em> ، مثل:</p>
+
+<ul dir="rtl">
+<li>تسجيل الأحداث logging.</li>
+<li>الأمان.</li>
+<li>متابعة الأداء.</li>
+</ul>
+
+<p dir="rtl">ربما لاحظت أن هذه النقاط يجمع بينها عامل مشترك، وهو أن تنفيذها يتطلب كتابة الشفرة في أماكن كثيرة متفرقة، فمثلاً تسجيل الأحداث سوف تجده منتشراً في كل ميثود تقوم بوظيفة ذات أهمية، أيضاً بالنسبة لمتابعة الأداء نحتاج للقياس في أماكن كثيرة لمعرفة الجزء المؤثر بشكل أكبر على مستوى الأداء. </p>
+
+<p dir="rtl"><strong>حسناً ما المشكلة في ذلك؟</strong>
+مع مرور الوقت وتطور المشروع ستتراكم هذه الشفرات المنتشرة لتؤثر على سرعة فهم وتعديل أجزاء من المشروع وتقلل من مستوى <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)">التجانس داخل مكوناته</a>. فمثلاً عند تغيير صياغة السجل log نحتاج لتعديل ملفات كثيرة من المشروع، وهذا بجانب أنه مضيع للوقت والجهد، فهو أيضاً مظنّة الخطأ.
+بهذا نستطيع أن نقول أن تقسيم المشروع إلى وحدات منفصلة يقدم أكثر من حل:</p>
+
+<ul dir="rtl">
+<li>سهولة التغيير والإضافة لأجزاء من المشروع، لأن انفصالها عن الأجزاء الأخرى يقلل من احتمالية حصول مشاكل.</li>
+<li>إمكانية إعادة استخدام أجزاء من المشروع في مشاريع قادمة.</li>
+<li>إزالة الشفرات المتكررة في المشروع وجعلها في مكان واحد مما يسهل تعديلها فيما بعد.</li>
+</ul>
+
+<p dir="rtl">هنا مثالين من مشروع tomcat :<br/>
+<strong>الأول</strong>: مثال على <em>اهتمام</em> في المشروع متعلق بـ class loading وهو مقسم تقسيماً جيداً : </p>
+
+<figure>
+<img src="http://images.slideplayer.com/32/10001920/slides/slide_3.jpg" alt="good modularity" />
+<figcaption>good modularity</figcaption>
+</figure>
+
+<p dir="rtl"><strong>الثاني</strong>: مثال على <em>اهتمام</em> آخر وهو التسجيل logging وهو موزع في كل أجزاء المشروع :<br/>
+<img src="http://images.slideplayer.com/32/10001920/slides/slide_4.jpg" alt="not so good modualrity
+" /> </p>
+
+<p dir="rtl">حسناً <strong>ما هو الحل المقترح؟</strong><br/>
+تعتبر البرمجة جانبية المنحى من أذكى الحلول المقدمة لتقسيم المشروع إلى مكونات منفصلة تقريباً ، فمع أثره الكبير لا يحتاج هذا النمط البرمجي الكثير من الجهد والوقت لتعلمه.
+وأرجو أن يكون الطرح في هذه التدوينة وما بعدها يعزز الفهم ويدعوك للبحث والاستكشاف.</p>
+
+<p dir="rtl">قبل أن نبدأ في تفصيلات AspectJ ربما من المناسب أن نرى مثالاً بسيطاً يوضح جانباً من فوائد هذه الإضافة:<br/>
+لنفترض أن لدينا هذه المتطلبات: </p>
+
+<hr />
+
+<p dir="rtl">لدينا برنامج للرسم ونريد منك أن تزودنا بالكلاسات التالية:<br/>
+ <code>Square</code>, <code>Circle</code>, <code>Triangle</code> وغيرها من الأشكال التي ستمكن الرسام من الرسم في برنامجنا، مع مراعاة الآتي:</p>
+
+<ul dir="rtl">
+<li>سجل كل محاولة إضافة أو تعديل شكل.</li>
+<li>لا يمكن تعديل الشكل إلا من الشخص الذي أنشأه.</li>
+<li>أي تعديل لخصائص الشكل يجب أن يظهر مباشرة في لوح الرسم في البرنامج.</li>
+</ul>
+
+<hr />
+
+<p dir="rtl">سنجد أن محاولة تسجيل كل تعديل في الأشكال يستلزم وجود شفرة داخل كل ميثود تعدل حجم أو لون أو موقع الشكل، مما يعني وجود الكثير من الشفرات الموجودة في ملف الشكل <em>class</em> ليس لها علاقة به وإنما لها علاقة بالمشروع، وهذا يصعّب إعادة استعمال الشكل في مشاريع أخرى :</p>
+
+<pre dir="ltr"><code>Public Shape drawCircle(...)
+{
+    if (!artist.isAuthorized())
+    {
+        throw NotAuthorizedDrawerException();
+    }
+    Logger.log(&quot;Artist : &quot; + artist + &quot;started drawing a Circle with attributes: &quot; + circle.attrs);
+
+
+    //----- Drawing Circle related logic -----
+
+
+    Logger.log(&quot;Artist : &quot; + artist + &quot;finished drawing a Circle with attributes: &quot; + circle.attrs);
+
+    drawingBoard.updateShape(circle.id);
+}
+</code></pre>
+
+<p dir="rtl">ربما لا تكون الشفرة منطقية بحكم أنها جزء من كلاس كامل، لكن يتضح لنا بوضوح كمية الشفرات المضافة لكل ميثود والتي سوف تتكرر في كل كلاس يمثل شكلاً من الأشكال المطلوبة. </p>
+
+<p dir="rtl">مع استعمال AspectJ بإمكاننا كتابة شفرات <strong>أنظف</strong> كما في المثال:</p>
+
+<pre dir="ltr"><code>public Shape drawCircle(..)
+{
+//----- Drawing Circle related logic -----
+}
+</code></pre>
+
+<p dir="rtl">نعم، كل جزء يفطي اهتماماته فقط، وفي مكان واحد في المشروع نضيف هذه الشفرة Aspect لتقوم بكل الجهد الذي بذلناه في المثال السابق : </p>
+
+<pre dir="ltr"><code>public aspect DrawingAspect
+{
+    pointcut drawingShape() : excution(* * *.draw*(..));
+
+    around() : drawingShape()
+    {
+        //--- do the logic before excuting any method starting with drawXXX()---
+        //---   e.g validate, log something
+
+        proceed();
+
+        //--- do the logic after excuting any method starting with drawXXX()---     
+    }
+}
+</code></pre>
+
+<p dir="rtl">قبل تنفيذ أي ميثود، سوف تقوم AspectJ بتنفيذ بعض الشفرات الموجودة في مكان ما ثم تبدأ تنفيذ الميثود.<br/>
+ربما لا يكون المثال مفهوماً بشكل كامل، لكن مع استمرار متابعتك لهذه السلسة ستصبح الأمثلة أقرب وأبسط.</p>
+
+<h3 dir="rtl" id="aspectj">AspectJ</h3>
+
+<p dir="rtl">كما ذكرنا سابقاً، AspectJ هي اضافة للغة جافا وحتى يمكن الاستفادة من الاضافة يحتاج أن نقوم بعملية ال<a href="https://en.wikipedia.org/wiki/Compiler">كومبايليشن</a> عن طريق كومبايلر يدعم هذه الإضافة وهو <a href="https://eclipse.org/aspectj/doc/next/devguide/ajc-ref.html"><code>ajc</code> </a>. الشيء الجيد هو أن بيئة التطوير Eclipse تدعم AspectJ وتبسط الكثير من التعقيدات المصاحبة للإضافة، بإمكانك المواصلة في <a href="https://eclipse.org/aspectj/">شرح تثبيت AspectJ على بيئة Eclipse</a> وربما أعود لكتابته بالعربية فيما بعد.</p>
+
+<p dir="rtl"><strong>ماذا بعد؟</strong><br/>
+كانت هذه مقدمة بسيطة جداً ومهمة قبل أن نبدأ في تفصيل مكونات الإضافة AspectJ وفي التدوينة القادمة نبدأ بمكونات الإضافة ونطرح أمثلة تظهر فائدة كل مكوّن بشكل أوضح وأخيراً نقطف ثمرة السلسة بتطبيق الإضافة على نمطي تصميم مشهورين.</p>
+
+<p dir="rtl"><strong>شكراً لقراءتك :).</strong></p>
+
+<hr />
+
+<h6 dir="rtl" id="imsh3lan"><a href="http://www.twitter.com/imsh3lan">@imsh3lan</a></h6>
+
+</body>
+</html>
